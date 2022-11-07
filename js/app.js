@@ -1,4 +1,11 @@
 
+const formu = document.getElementById('formul');
+
+formu.addEventListener('focus',(evento)=>{evento.target.style.background="yellow"},true);
+formu.addEventListener('blur',(evento)=>{evento.target.style.background=""},true);
+
+
+
 
 function sumar (){
 
@@ -14,4 +21,13 @@ function sumar (){
 
 
 document.getElementById('resultado').innerHTML = `El Resultado es: ${resultado}`;
+
+}
+
+
+function limpiar(){
+
+    document.getElementById('formul').reset();
+    document.getElementById('resultado').innerHTML = "";
+
 }
